@@ -1,29 +1,19 @@
 id: manageengine-applications-manager
-
 info:
-  name: ZOHO ManageEngine Applications Manager Panel - Detected
-  author: dhiyaneshDK
+  name: manageengine-applications-manager
+  author: cn-kali-team
+  tags: detect,tech,manageengine-applications-manager
   severity: info
-  description: ZOHO ManageEngine panel was detected.
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cwe-id: CWE-200
-  tags: panel,zoho,manageengine
-
-requests:
-  - method: GET
-    path:
-      - '{{BaseURL}}/index.do'
-
-    matchers-condition: and
-    matchers:
-      - type: word
-        words:
-          - '<title>Applications Manager Login Screen</title>'
-
-      - type: status
-        status:
-          - 200
-
-# Enhanced by mp on 2023/01/29
+  metadata:
+    product: manageengine-applications-manager
+    vendor: 00_unknown
+    verified: false
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: word
+    words:
+    - /appmanager.js
+    case-insensitive: true

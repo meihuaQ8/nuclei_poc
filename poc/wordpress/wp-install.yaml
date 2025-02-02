@@ -12,8 +12,10 @@ info:
   reference:
     - https://smaranchand.com.np/2020/04/misconfigured-wordpress-takeover-to-remote-code-execution/
   tags: panel,wordpress
+  metadata:
+    max-request: 1
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-admin/install.php"

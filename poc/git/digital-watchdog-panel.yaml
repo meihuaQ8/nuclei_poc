@@ -7,10 +7,10 @@ info:
   description: |
     Digital Watchdog panel was detected.
   metadata:
-    max-request: 1
     verified: true
-    fofa-query: icon_hash="868509217"
-    shodan-query: http.favicon.hash:868509217
+    max-request: 2
+    shodan-query: "http.favicon.hash:868509217"
+    fofa-query: "icon_hash=\"868509217\""
   tags: digital-watchdog,panel,detect,login,dw,spectrum
 
 http:
@@ -25,4 +25,4 @@ http:
       - type: dsl
         dsl:
           - "status_code==200 && ('868509217' == mmh3(base64_py(body)))"
-# digest: 4b0a00483046022100e849b952b0ea96f568c0746acad027fb76ea85738d9e5621a94afaa79103f005022100b9d51a990553586b7768ff6474f128f3d0e607497de83d955f6a67084e7d5c57:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221008797fe37642b04147819aa1cd1dcc4b2d57b10f4b9ba9ef9a7bcca463c1498d4022045d56fa1384b011d3812eaaa87512a0b4a27a4faa42f1efb93ed00d23fde54e0:922c64590222798bb761d5b6d8e72950
